@@ -1,0 +1,22 @@
+<h2>all about the celeb!</h2>
+{{#with celebrity}}
+    <h2>
+        {{name}}
+    </h2>
+    <p>
+        {{occupation}}
+    </p>
+    <p>
+        {{catchPhrase}}
+    </p>
+    <p>
+        <button><a href="/celebrities/edit/{{_id}}">Edit this celeb</a></button>
+        {{!-- <form action="/celebrities/" method="POST">
+            <button type="submit">edit this celeb?</button>
+        </form> --}}
+    </p>
+{{/with}}
+
+<p><a href="/">return to homepage</a></p>
+
+

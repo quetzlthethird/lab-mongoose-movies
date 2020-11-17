@@ -1,0 +1,43 @@
+<h1>
+    movies hompage!
+</h1>
+
+{{#each movies}}
+    <p>
+        <h2>
+            {{title}}
+        </h2>
+        
+        <p><b>Genre</b>: {{genre}}</p>
+
+        <p><b>Plot</b>: {{plot}}</p>
+
+{{!-- Iteration 9 - display full cast list --}}
+        <p> Cast Members:
+            <ul>
+                {{#each cast}}
+                    <li>{{name}}</li>
+                {{/each}}
+            </ul>
+        </p>
+
+        {{!-- <a href="/movies/{{id}}"> See more about {{title}}!</a> --}}
+    </p>
+    
+    {{!-- <p>
+        <form action="/celebrities/{{id}}/delete" method="POST">
+            <button type="submit">delete this celeb?</button>
+        </form> --}}
+    </p>
+        <button><a href="/movies/edit/{{_id}}">Edit this movie</a></button>
+    </p>
+    
+{{/each}}
+
+<p><a href="/">return to homepage</a></p>
+
+<button>
+    <p>
+        <a href="/movies/new">Add a movie?</a>
+    </p>   
+</button>
